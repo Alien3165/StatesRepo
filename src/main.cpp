@@ -120,11 +120,16 @@ void opcontrol() {
             scoreLong();
         }
         else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_R1)) {
-            scoreBottom();
+            matchload();
         }
-        else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_L1)) {
+        else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_L2)) {
             scoreMiddle();
         }
+		else if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_L1)) {
+			scoreBottom();
+		}
+
+
 
         // ===== PNEUMATICS =====
         if (controller.get_digital(pros::E_CONTROLLER_DIGITAL_Y)) {
